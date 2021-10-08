@@ -42,7 +42,7 @@ Pi to a virtual machine, so that a tunnel can be used to connect from the virtua
 
 ### 1. Setting Up a Virtual Machine on Google Cloud Platform
 
-To setup GCP to host our virtual machine, a GCP account needs to be created. Once an account is created the following [script](setup_gcloud.sh) can be modified and ran on the
+To setup GCP to host our virtual machine, a GCP account needs to be created. Once an account is created the following [script](https://github.com/KDunc11/RemotePiServer/src/server/scripts/setup_gcloud.sh) can be modified and ran on the
 Raspberry Pi server to setup the virtual machine on the cloud:
 
 ```bash
@@ -87,7 +87,7 @@ individuals who are to be granted access to the Raspberry Pi to provide techninc
 #### I. Modify Tunneling Script
 
 On bootup of the server the Raspberry Pi's micro SD card will already contain [scripts](https://github.com/KDunc11/RemotePiServer/src/server/scripts) that can be modified and run
-to support setup of the server. The first script modify on the server is the [tunnel.sh](tunnel.sh) script.
+to support setup of the server. The first script modify on the server is the [tunnel.sh](https://github.com/KDunc11/RemotePiServer/src/server/scripts/tunnel.sh) script.
 
 ```bash
 #!/bin/bash
@@ -110,7 +110,7 @@ fi
 
 #### II. Setup Tunneling
 
-Next run the setup [script](setup_raspberrypi.sh) for the Raspberry Pi:
+Next run the setup [script](https://github.com/KDunc11/RemotePiServer/src/server/scripts/setup_raspberrypi.sh) for the Raspberry Pi:
 
 ```bash
 #!/bin/bash
@@ -124,7 +124,7 @@ This script will setup the tunnel for reverse SSH to always be running so that t
 
 #### III. Start the Server
 
-Now the server can be started using the following [script](start_server.sh):
+Now the server can be started using the following [script](https://github.com/KDunc11/RemotePiServer/src/server/scripts/start_server.sh):
 
 ```bash
 #!/bin/bash
@@ -138,7 +138,7 @@ on the cloud and connect to the server to do any remote administrative work.
 
 ### 3. Connecting to the Raspberry Pi
 
-Now that the server is setup for remote SSH connection a user can login to the virtual machine and use the following [command](connect_to_pi.sh) to connect to the server:
+Now that the server is setup for remote SSH connection a user can login to the virtual machine and use the following [command](https://github.com/KDunc11/RemotePiServer/src/virtual-machine/scripts/connect_to_pi.sh) to connect to the server:
 
 ```bash
 # replace PINAME with the name of the Raspberry Pi
@@ -151,7 +151,7 @@ The user will have to enter the password assigned to the Raspberry Pi on bootup 
   <img src='./images/reverse_ssh_into_pi.png' />
 </p>
 
-From here the user can setup Zoom on the server by using the following [script](setup_zoom.sh):
+From here the user can setup Zoom on the server by using the following [script](https://github.com/KDunc11/RemotePiServer/src/server/scripts/setup_zoom.sh):
 
 ```bash
 #!/bin/bash
@@ -182,7 +182,7 @@ tar xvf zoom_i686.tar.xz
 ```
 
 Note that the script depends on the model of the Raspberry Pi. Uncomment the line corresponding to the model of your server (Raspberry Pi 2, 3, 4). Any additional commands can
-be executed through command line by the user to provide assitance to the education center in which the server exists. For example this is a [script](run_zoom.sh) to start Zoom:
+be executed through command line by the user to provide assitance to the education center in which the server exists. For example this is a [script](https://github.com/KDunc11/RemotePiServer/src/server/scripts/run_zoom.sh) to start Zoom:
 
 ```bash
 #!/bin/bash
