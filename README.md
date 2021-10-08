@@ -7,7 +7,7 @@ the Church of the Nazarene to implement in third world countries where the churc
 on site maintence/setup. The purpose of implementing this solution is to provide students attending the church's education centers with the opportunity to
 pursue higher education via virtual learning.
 
-<p class='center'>
+<p align="center">
   <img src='./images/solution_overview.png' />
 </p>
 
@@ -34,7 +34,7 @@ using port forwarding. This works by assigning a socket to listen to the port on
 is forwarded over the secure channel, and a connection is made to the host port from the Raspberry Pi server. In short, reverse SSH allows the ability to connect the Raspberry
 Pi to a virtual machine, so that a tunnel can be used to connect from the virtual machine to the Raspberry Pi server and remotely administer the server.
 
-<p class='center'>
+<p align="center">
   <img src='./images/reverse_ssh.png' />
 </p>
 
@@ -75,7 +75,7 @@ ssh-keygen -t rsa && cat ~/.ssh/id_rsa.pub > NAME.txt && sed -i '1s/^/USERNAME:/
 Notice that the virtual machine is given the public SSH generated on the Raspberry Pi. This allows the virtual machine to securely connect to the server. Once setup, something
 like the following should show up on your GCP account:
 
-<p class='center'>
+<p align="center">
   <img src='./images/google_cloud_server.png' />
 </p>
 
@@ -147,7 +147,7 @@ ssh -p 6000 PINAME@localhost
 
 The user will have to enter the password assigned to the Raspberry Pi on bootup of the server. The command could be made into a simple script and executed by running the script. For example:
 
-<p class='center'>
+<p align="center">
   <img src='./images/reverse_ssh_into_pi.png' />
 </p>
 
@@ -194,6 +194,6 @@ cd /home/pi/zoom && ./zoom
 
 To exit from the Raspberry Pi server from the virtual machine shell simply use the exit command.
 
-<p class='center'>
+<p align="center">
   <img src='./images/exiting_the_pi_from_VM.png' />
 </p>
